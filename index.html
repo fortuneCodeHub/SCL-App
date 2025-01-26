@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- Manrope fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- Customize tailwind CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-indigo-600 text-white p-4 shadow-lg">
+        <div class="max-w-screen-xl mx-auto flex justify-between items-center container">
+            <h1 class="text-2xl font-bold">SCL</h1>
+            <nav>
+                <div class="relative">
+                    <button id="menu-toggle" class="sm:hidden px-4 py-2 bg-indigo-700 rounded text-white focus:outline-none focus:ring cursor-pointer">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                    <ul id="menu" class="hidden sm:flex items-center gap-4 absolute sm:static top-full right-10 w-[300px] sm:w-auto bg-indigo-700 sm:bg-transparent shadow-lg sm:shadow-none rounded-lg">
+                        <li><a href="#" class="block sm:inline hover:underline p-4 sm:p-0">Home</a></li>
+                        <li><a href="#courses" class="block sm:inline hover:underline p-4 sm:p-0">Courses</a></li>
+                        <li><a href="#contact" class="block sm:inline hover:underline p-4 sm:p-0">Contact</a></li>
+                        <li class="relative">
+                            <button id="years-toggle" class="flex items-center gap-2 hover:underline p-4 sm:p-0 cursor-pointer">
+                                Years <i class="bi bi-chevron-down"></i>
+                            </button>
+                            <ul id="years-menu" class="hidden relative sm:absolute sm:top-full sm:left-0 bg-indigo-700 shadow-lg rounded-lg sm:w-48 w-full sm:ps-0 ps-4">
+                                <li><a href="#2024" class="block px-4 py-2 hover:bg-indigo-800">Year 2024</a></li>
+                                <li><a href="#2023" class="block px-4 py-2 hover:bg-indigo-800">Year 2023</a></li>
+                                <li><a href="#2022" class="block px-4 py-2 hover:bg-indigo-800">Year 2022</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="hidden sm:flex gap-4">
+                <a href="#login" class="px-4 py-2 bg-white text-indigo-600 rounded hover:bg-gray-100">Login</a>
+                <a href="#signup" class="px-4 py-2 bg-indigo-700 text-white rounded hover:bg-indigo-800">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="">
+        <!-- Hero Section -->
+        <section class="text-center py-32 rounded_buttom overflow-hidden" style="background-image: url('assets/images/scl-hero-bg-image.png'); background-size: cover; background-position: center;">
+            <div class="max-w-3xl mx-auto relative z-10">
+                <h2 class="text-3xl md:text-6xl font-bold opacity-0 animate-fadeIn animate-delay-300 text-shadow-lg text-indigo-500">Explore Your Course Materials</h2>
+                <p class="mt-4 text-lg text-indigo-500 opacity-0 animate-fadeIn animate-delay-500 text-shadow-md">Easily find textbooks and course documents for every academic year and discipline.</p>
+                <button class="mt-6 px-6 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition opacity-0 animate-fadeIn animate-delay-700 text-shadow-sm">Get Started</button>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="py-16">
+            <div class="max-w-screen-xl mx-auto px-4">
+                <h3 class="text-2xl md:text-4xl font-bold text-center text-gray-800 mb-8">Available Courses</h3>
+
+                <!-- Year 1 -->
+                <div id="2024" class="mb-12">
+                    <h4 class="text-2xl font-bold text-indigo-600 mb-6">Year 2024</h4>
+                    
+                    <!-- Disciplines for Year 1 -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Discipline 1 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Computer Science</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Data Structures</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Algorithms</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Introduction to Programming</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Operating Systems</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Discrete Mathematics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Database Management</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Discipline 2 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Electrical Engineering</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Circuit Theory</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Electromagnetism</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Signals and Systems</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Digital Logic Design</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Control Systems</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Power Systems</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Discipline 3 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Mechanical Engineering</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Thermodynamics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Fluid Mechanics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Machine Design</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Strength of Materials</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Dynamics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Heat Transfer</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Discipline 4 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Civil Engineering</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Structural Analysis</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Geotechnical Engineering</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Fluid Mechanics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Construction Materials</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Transportation Engineering</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Surveying</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Discipline 5 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Chemical Engineering</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Process Design</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Material Science</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Transport Phenomena</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Fluid Mechanics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Chemical Reaction Engineering</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Biochemical Engineering</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Discipline 6 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Aerospace Engineering</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Flight Mechanics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Propulsion</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Aerospace Structures</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Aerodynamics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Aircraft Design</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Avionics</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Year 2 -->
+                <div id="2023" class="mb-12">
+                    <h4 class="text-2xl font-bold text-indigo-600 mb-6">Year 2023</h4>
+                    
+                    <!-- Disciplines for Year 1 -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Discipline 1 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Computer Science</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Data Structures</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Algorithms</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Introduction to Programming</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Operating Systems</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Discrete Mathematics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Database Management</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Discipline 2 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Electrical Engineering</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Circuit Theory</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Electromagnetism</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Signals and Systems</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Digital Logic Design</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Control Systems</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Power Systems</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Discipline 3 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Mechanical Engineering</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Thermodynamics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Fluid Mechanics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Machine Design</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Strength of Materials</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Dynamics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Heat Transfer</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Discipline 4 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Civil Engineering</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Structural Analysis</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Geotechnical Engineering</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Fluid Mechanics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Construction Materials</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Transportation Engineering</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Surveying</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Discipline 5 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Chemical Engineering</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Process Design</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Material Science</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Transport Phenomena</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Fluid Mechanics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Chemical Reaction Engineering</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Biochemical Engineering</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Discipline 6 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Aerospace Engineering</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Flight Mechanics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Propulsion</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Aerospace Structures</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Aerodynamics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Aircraft Design</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Avionics</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Year 3 -->
+                <div id="2022" class="mb-12">
+                    <h4 class="text-2xl font-bold text-indigo-600 mb-6">Year 2022</h4>
+                    
+                    <!-- Disciplines for Year 1 -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Discipline 1 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Computer Science</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Data Structures</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Algorithms</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Introduction to Programming</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Operating Systems</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Discrete Mathematics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Database Management</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Discipline 2 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Electrical Engineering</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Circuit Theory</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Electromagnetism</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Signals and Systems</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Digital Logic Design</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Control Systems</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Power Systems</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Discipline 3 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Mechanical Engineering</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Thermodynamics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Fluid Mechanics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Machine Design</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Strength of Materials</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Dynamics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Heat Transfer</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Discipline 4 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Civil Engineering</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Structural Analysis</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Geotechnical Engineering</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Fluid Mechanics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Construction Materials</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Transportation Engineering</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Surveying</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Discipline 5 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Chemical Engineering</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Process Design</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Material Science</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Transport Phenomena</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Fluid Mechanics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Chemical Reaction Engineering</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Biochemical Engineering</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Discipline 6 -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 card">
+                            <h5 class="text-xl font-bold text-indigo-600">Aerospace Engineering</h5>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-indigo-500 hover:underline">Flight Mechanics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Propulsion</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Aerospace Structures</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Aerodynamics</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Aircraft Design</a></li>
+                                <li><a href="#" class="text-indigo-500 hover:underline">Avionics</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-gray-200 py-16 px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h3 class="text-2xl md:text-4xl font-bold text-gray-800">Contact Us</h3>
+                <p class="mt-4 text-gray-600">Have questions or need assistance? Reach out to us!</p>
+                <form class="mt-6">
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <input type="text" placeholder="Your Name" class="p-3 border border-gray-300 rounded-lg">
+                        <input type="email" placeholder="Your Email" class="p-3 border border-gray-300 rounded-lg">
+                    </div>
+                    <textarea placeholder="Your Message" rows="4" class="w-full mt-4 p-3 border border-gray-300 rounded-lg"></textarea>
+                    <button type="submit" class="mt-4 px-6 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">Send Message</button>
+                </form>
+            </div>
+        </section>
+        
+    </main>
+
+    <div class="bg-gray-200">
+        <footer class="bg-indigo-600 text-white py-10 rounded_top">
+            <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-8">
+                <!-- About Section -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">About SCL</h4>
+                    <p class="text-sm leading-relaxed">
+                        SCL is your one-stop platform for accessing course materials across multiple disciplines and academic years. Empowering students and educators with easy access to resources.
+                    </p>
+                </div>
+        
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm hover:underline">Home</a></li>
+                        <li><a href="#courses" class="text-sm hover:underline">Courses</a></li>
+                        <li><a href="#contact" class="text-sm hover:underline">Contact</a></li>
+                        <li><a href="#login" class="text-sm hover:underline">Login</a></li>
+                        <li><a href="#signup" class="text-sm hover:underline">Sign Up</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="bi bi-envelope-fill"></i> support@sclplatform.com</li>
+                        <li><i class="bi bi-telephone-fill"></i> +1 (555) 123-4567</li>
+                        <li><i class="bi bi-geo-alt-fill"></i> 123 Academic Way, Knowledge City</li>
+                    </ul>
+                    <div class="flex gap-4 mt-4">
+                        <a href="#" class="text-white hover:text-gray-300"><i class="bi bi-facebook text-xl"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300"><i class="bi bi-twitter text-xl"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300"><i class="bi bi-linkedin text-xl"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300"><i class="bi bi-instagram text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-indigo-500 pt-4 text-center text-sm">
+                &copy; 2025 SCL Platform. All Rights Reserved.
+            </div>
+        </footer>
+    </div>
+    
+
+    <!-- Custom Javascript -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
